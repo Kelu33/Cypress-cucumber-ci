@@ -1,0 +1,24 @@
+{
+  "name": "ci_cy_cucumber",
+  "description": "Base Cypress Project With Cucumber CI Report",
+  "scripts": {
+    "test": "cypress run --spec **/*.feature --browser chrome",
+    "test:all": "cypress run --spec **/*.features --browser chrome",
+    "report": "node cucumber-html-report.js"
+  },
+  "author": "Lucas Baste",
+  "devDependencies": {
+    "cypress": "^9.5.4",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "multiple-cucumber-html-reporter": "^1.20.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-{feature,features}# cypress-cucumber-ci
+# cypress-cucumber-ci
 ## Init Project
 ### - Generate an empty npm project
 ```
